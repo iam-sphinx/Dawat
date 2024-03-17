@@ -20,6 +20,6 @@ app.get("/health", async (req: Request, res: Response) => {
 
 app.use("/api/user", userRoutes);
 
-app.listen(8080, () => {
-  console.log("server started on port: 8080");
+app.listen(process.env.PORT, () => {
+  console.log(`server started on port: ${process.env.PORT}`);
 });
